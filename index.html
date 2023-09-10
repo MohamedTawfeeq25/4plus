@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>4plus star general Trading </title>
+</head>
+<body>
+    <div id="cont">
+        <div id="home">
+            <div id="nav">
+                <div id="logo">
+                   <div id="img">
+                       <img src="./logo.png" alt="logo">
+                   </div>
+                </div>
+                <div id="nav-bar">
+                    <ol>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Products</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div id="h-cont">
+                    <p id="cnn">4 Plus Star<br/> General Trading</p>
+                   
+            </div>
+        </div>
+        <div id="product">
+            <div id="prod">
+                <div id="card" class="cd">
+                    <div id="cimg">
+                        <img src="./safety.jpg" alt="">
+                    </div>
+                    <div id="ci">
+                        <p>Safety Shoes</p>
+                    </div>
+                </div>
+                <div id="card" class="cd">
+                    <div id="cimg">
+
+                    </div>
+                    <div id="ci">
+
+                    </div>
+                </div>
+                <div id="card" class="cd">
+                    <div id="cimg">
+
+                    </div>
+                    <div id="ci">
+
+                    </div>
+                </div>
+                <div id="card" class="cd">
+                    <div id="cimg">
+
+                    </div>
+                    <div id="ci">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="services">
+
+        </div>
+        <div id="contact">
+
+        </div>
+    </div>
+    <script>
+        var card=document.querySelector('#prod');
+        card.addEventListener("mouseenter",()=>{
+            card.style="animation-play-state:paused";
+        })
+        card.addEventListener("mouseleave",()=>{
+            card.style="animation-play-state:resume";
+        })
+    </script>
+</body>
+</html>
