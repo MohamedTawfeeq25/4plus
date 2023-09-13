@@ -1,5 +1,5 @@
 body{
-    background-color: red;
+    user-select:none ;
     width:100%;
     height:100%;
     position:fixed;
@@ -11,16 +11,14 @@ body{
     height:100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background-image: url('./back.jpg');
+    scroll-behavior: smooth;
+    background-image: url('./img/back.jpg');
     background-repeat: no-repeat;
    background-size: cover;
    background-attachment: fixed;
     
 }
-#home,#services,#product,#contact{
-    width:100%;
-    height:100vh;
-}
+
 #home{
     display:grid;
     grid-template-rows: 20% 80%;
@@ -71,8 +69,6 @@ ol li{
 
 }
 #h-cont{
-    /*background-color: #5E9CD7;*/
-   
    
     display: flex;
     justify-content: center;
@@ -96,52 +92,89 @@ ol li{
        transition: transform 3s;
    }
 }
-#product{
-    background-color: #DFEEEB;
-    width:100%;
-    height:55vh;
-
+#line{
+  
+    position: relative;
+    top:20px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+#line div{
+    width:25%;
+    height:15%;
+    border:2px solid transparent;
+    background-color: #FE3904;
+}
+#product{
+    background-color: #F8F8F8;
+    
+    width:100%;
+    height:90%;
+
+   display:grid;
+   grid-template-rows: 30% 70%;
+}
+#prodh{
+  
+  
+   
+    align-items: center;
+}
+#prodh p{
+    width:100%;
+    text-align: center;
+    margin:10px;
+    font-size: 35px;
+    font-weight: bold;
+   
+   color :black;
 }
 
-#prod{
+#produ{
     display: flex;
-    
-    border-radius: 10px;
-    width:80%;
-    height:90%;
-    padding:10px;
-    animation:prod 10s linear infinite;
-    
+    justify-content: center;
+    align-items: center;
+  
 }
-@keyframes prod {
-    0%{
-        transform: translate(-1200px,0px);
-    }
-    25%{
-        transform: translate(-500px,0px);
-    }
-    50%{
-        transform: translate(00px,0px);
-    }
-    75%{
-        transform: translate(500px,0px);
-    }
-    100%{
-        transform: translate(1200px,0px);
-    }
-   
-}
-#card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    height:100%;
-    width:25%;
-    background-color: #FAFAFA;
-    margin-right:20px;
+#pro{
+ 
+    width:50%;
+    height:80%;
     display:grid;
-    grid-template-rows: 80% 20%;
+    grid-template-columns: 15% 70% 15%;
+}
+#left,#right{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight:bold;
+}
+#left p:hover,#right p:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding:20px;
+    border-radius: 20px;
+    color:white;
+}
+#center{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.card{
+  display:none;
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-right:40px;
+    height:85%;
+    border-radius: 10px;
+    width:100%;
+    background-color: #FAFAFA;
+    
 }
 #card #cimg{
   
@@ -157,8 +190,10 @@ ol li{
     font-size:25px;
     
 }
+
 #services{
-    background-color: #E5E5E5;
+    background-color: #F2F2F2;
+    
     width:100%;
     height: 100%;
     overflow-y:auto;
@@ -171,12 +206,12 @@ ol li{
     text-align: center;
     
     font-size: 35px;
-   color :white;
+   color :#D82625;
 }
 #hser h2{
     text-align: center;
     width:100%;
-    color:white;
+    color:black;
 }
 #ser{
     display: flex;
@@ -190,8 +225,9 @@ ol li{
 #serbox{
     width:15%;
     height:40%;
-   background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   background-color: #FFFFFF;
+         cursor: pointer;  
+         text-align: center;
             border-radius: 8px;
             font-weight: bold;
             font-size: 20px;
@@ -202,9 +238,571 @@ ol li{
     justify-content: center;
     align-items: center;
 }
+#serbox:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#serv{
+  
+    position: relative;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#serv div{
+    width:20%;
+    height:15%;
+    border:2px solid transparent;
+    background-color: #FE3904;
+}
+#contact{
+    background-color: #191919;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    color:white;
+    grid-template-rows: 20% 80%;
+
+}
+#contact a{
+    color:white;
+    text-decoration: none;
+}
+#contu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#contu h1{
+    color:white;
+    margin-left:30px;
+}
+#contac{
+    display:grid;
+    grid-template-columns: 50% 50%;
+
+}
+#con{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#add{
+    display:flex;
+    justify-content: center;
+    
+}
+@media (max-width: 575.98px) {
+    #home{
+        display:grid;
+        grid-template-rows: 15% 85%;
+        width:100%;
+        
+        height:100%;
+        
+    }
+    #nav{
+       
+        display: grid;
+       
+        grid-template-columns: 20% 80%;
+    }
+    #logo #img{
+      
+        height:85%;
+        width: 100%;
+    }
+    #img img{
+        width:100%;
+        height:90%;
+    }
+    #nav #nav-bar ol {
+        transform:translate(-10px,-15px);
+        display: grid;
+        
+        width:90%;
+        height: 100%;
+        grid-template-columns: 25% 25% 25% 25%;
+    
+    }
+    ol li{
+        list-style-type: none;
+        font-size:16px;
+    }
+    #h-cont p{
+        color:white;
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        animation-name: st;
+        animation-duration: 2s;
+        transform:translate(0px,-80px);
+    }
+    
+@keyframes st {
+    from{
+        transform: translate(0px,-800px);
+    }
+    to{
+        transform: translate(0px,-80px);
+        transition: transform 3s;
+    }
+ }
+
+ #line div{
+     width:55%;
+     height:15%;
+     border:2px solid transparent;
+     background-color: #FE3904;
+ }
+ #product{
+     background-color: #F8F8F8;
+     width:100%;
+     height:80%;
+ 
+    display:grid;
+    grid-template-rows: 20% 80%;
+ }
+
+ #prodh p{
+     width:100%;
+     text-align: center;
+     margin:10px;
+     font-size: 30px;
+     font-weight: bold;
+    user-select: none;
+    color :black;
+}
+ #pro{
+  
+     width:100%;
+     height:85%;
+     display:grid;
+     grid-template-columns: 15% 70% 15%;
+ }
+
+ .card{
+   display:none;
+    
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     transform:translate(25px);
+     height:85%;
+     border-radius: 10px;
+     width:100%;
+     background-color: #FAFAFA;
+     
+ }
+
+
+#hser h2{
+    text-align: center;
+    width:100%;
+    font-size:22px;
+    color:black;
+}
+#ser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+#serbox{
+    width:28%;
+    height:25%;
+   background-color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    margin:10px;
+    text-align: center;
+    display:flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
 
 #contact{
     background-color: #191919;
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: grid;
+    color:white;
+    grid-template-rows: 20% 80%;
+
 }
+
+
+#add h1{
+    font-size:30px;
+    text-align: center;
+}
+#add h3{
+  
+    text-align: center;
+    font-size: 15px;
+}
+#add h4{
+    
+    text-align: center;
+}
+
+#contactinfo h1{
+   
+    font-size: 26px;
+    text-align: center;
+}
+#contactinfo h3{
+    
+    
+    font-size: 15px;
+}
+  }
+  
+  /* Small Devices (phones and tablets, 576px - 767.98px) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    #home{
+        display:grid;
+        grid-template-rows: 15% 85%;
+        width:100%;
+        height:100%;
+        
+    }
+    #nav{
+       
+        display: grid;
+       
+        grid-template-columns: 20% 80%;
+    }
+
+    #logo #img{
+      
+        height:85%;
+        width: 100%;
+    }
+    #img img{
+        width:100%;
+        height:90%;
+    }
+    #nav #nav-bar ol {
+        transform:translate(0px,-15px);
+        display: grid;
+        
+        width:90%;
+        height: 100%;
+        grid-template-columns: 25% 25% 25% 25%;
+    
+    }
+ 
+    ol li{
+        list-style-type: none;
+        font-size:20px;
+    }
+  
+    #h-cont p{
+        color:white;
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        animation-name: st;
+        animation-duration: 2s;
+        transform:translate(0px,-50px);
+    }
+    
+@keyframes st {
+    from{
+        transform: translate(0px,-800px);
+    }
+    to{
+        transform: translate(0px,-50px);
+        transition: transform 3s;
+    }
+ }
+
+ #product{
+     background-color: #F8F8F8;
+     width:100%;
+     height:80%;
+ 
+    display:grid;
+    grid-template-rows: 20% 80%;
+ }
+
+ #prodh p{
+     width:100%;
+     text-align: center;
+     margin:10px;
+     font-size: 30px;
+     font-weight: bold;
+    user-select: none;
+    color :black;
+ }
+ 
+
+ #pro{
+  
+     width:100%;
+     height:85%;
+     display:grid;
+     grid-template-columns: 15% 70% 15%;
+ }
+ 
+ .card{
+   display:none;
+    
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     transform:translate(25px);
+     height:85%;
+     border-radius: 10px;
+     width:70%;
+     background-color: #FAFAFA;
+     
+ }
+ 
+
+#hser h2{
+    text-align: center;
+    width:100%;
+    font-size:22px;
+    color:black;
+}
+#ser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+#serbox{
+    width:25%;
+    height:27%;
+   background-color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    margin:10px;
+    text-align: center;
+    display:flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
+
+#add h1{
+    font-size:30px;
+    text-align: center;
+}
+#add h3{
+  
+    text-align: center;
+    font-size: 15px;
+}
+#add h4{
+    
+    text-align: center;
+}
+
+#contactinfo h1{
+   
+    font-size: 26px;
+    text-align: center;
+}
+#contactinfo h3{
+    
+    
+    font-size: 15px;
+}
+  }
+  
+  /* Medium Devices (tablets, 768px - 991.98px) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    #home{
+        display:grid;
+        grid-template-rows: 15% 85%;
+        width:100%;
+        height:100%;
+        
+    }
+    #nav{
+       
+        display: grid;
+       
+        grid-template-columns: 30% 70%;
+    }
+   
+    #logo #img{
+      
+        height:87%;
+        width: 70%;
+    }
+    #img img{
+        width:100%;
+        height:90%;
+    }
+    #nav #nav-bar ol {
+        transform:translate(0px,-15px);
+        display: grid;
+        
+        width:90%;
+        height: 100%;
+        grid-template-columns: 25% 25% 25% 25%;
+    
+    }
+   
+    ol li{
+        list-style-type: none;
+        font-size:23px;
+    }
+    #h-cont{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #h-cont p{
+        color:white;
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        animation-name: st;
+        animation-duration: 2s;
+      
+    }
+    
+@keyframes st {
+    from{
+        transform: translate(0px,-800px);
+    }
+    to{
+        transform: translate(0px,0px);
+        transition: transform 3s;
+    }
+ }
+
+ #product{
+     background-color: #F8F8F8;
+     width:100%;
+     height:80%;
+ 
+    display:grid;
+    grid-template-rows: 20% 80%;
+ }
+
+ #prodh p{
+     width:100%;
+     text-align: center;
+     margin:10px;
+     font-size: 35px;
+     font-weight: bold;
+    user-select: none;
+    color :black;
+ }
+ 
+ 
+ #pro{
+  
+     width:100%;
+     height:85%;
+     display:grid;
+     grid-template-columns: 15% 70% 15%;
+ }
+ 
+
+ .card{
+   display:none;
+    
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     transform:translate(25px);
+     height:85%;
+     border-radius: 10px;
+     width:60%;
+     background-color: #FAFAFA;
+     
+ }
+ 
+ 
+
+#hser h2{
+    text-align: center;
+    width:100%;
+    font-size:25px;
+    color:black;
+}
+#ser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+#serbox{
+    width:23%;
+    height:28%;
+   background-color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    margin:10px;
+    text-align: center;
+    display:flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+#serv{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#serv div{
+    width:50%;
+    height:15%;
+    border:2px solid transparent;
+    background-color: #FE3904;
+}
+#contact{
+    background-color: #191919;
+    width: 100%;
+    height: auto;
+    display: grid;
+    color:white;
+    grid-template-rows: 20% 80%;
+
+}
+
+#add h1{
+    font-size:30px;
+    text-align: center;
+}
+#add h3{
+  
+    text-align: center;
+    font-size: 15px;
+}
+#add h4{
+    
+    text-align: center;
+}
+
+#contactinfo h1{
+   
+    font-size: 26px;
+    text-align: center;
+}
+#contactinfo h3{
+    
+    
+    font-size: 15px;
+}
+  }

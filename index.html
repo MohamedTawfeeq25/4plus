@@ -13,7 +13,7 @@
             <div id="nav">
                 <div id="logo">
                    <div id="img">
-                       <img src="./logo.png" alt="logo">
+                       <img src="./img/logo.png" alt="logo">
                    </div>
                 </div>
                 <div id="nav-bar">
@@ -27,50 +27,67 @@
             </div>
             <div id="h-cont">
                     <p id="cnn">4 Plus Star<br/> General Trading</p>
-                   
+                         
             </div>
+     
         </div>
         <div id="product">
-      
-            <div id="prod">
-                <div id="card" class="cd">
-                    <div id="cimg">
-                        <img src="./safety.jpg" alt="">
+            <div id="prodh">
+                <p>Products</p>
+                <div id="line"><div></div></div> 
+            </div>
+            <div id="produ">
+                <div id="pro">
+                    <div id="left">
+                        <p onclick="dec(-1)">&#10094;</p>
                     </div>
-                    <div id="ci">
-                        <p>Safety Shoes</p>
+                    <div id="center">
+                        <div id="1" class="card">
+                            <div id="cimg">
+                                <img src="./img/safety.png" alt="">
+                            </div>
+                            <div id="ci">
+                                <p>Safety Shoes</p>
+                            </div>
+                        </div>
+                        <div id="2" class="card">
+                            <div id="cimg">
+                                <img src="./img/safety.png" alt="">
+                            </div>
+                            <div id="ci">
+                                <p>Safety Shoes 1</p>
+                            </div>
+                        </div>
+                        <div id="3" class="card">
+                            <div id="cimg">
+                                <img src="./img/safety.png" alt="">
+                            </div>
+                            <div id="ci">
+                                <p>Safety Shoes 2 </p>
+                            </div>
+                        </div>
+                        <div id="4" class="card">
+                            <div id="cimg">
+                                <img src="./img/safety.png" alt="">
+                            </div>
+                            <div id="ci">
+                                <p>Safety Shoes 3</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div id="card" class="cd">
-                    <div id="cimg">
-
-                    </div>
-                    <div id="ci">
-
-                    </div>
-                </div>
-                <div id="card" class="cd">
-                    <div id="cimg">
-
-                    </div>
-                    <div id="ci">
-
-                    </div>
-                </div>
-                <div id="card" class="cd">
-                    <div id="cimg">
-
-                    </div>
-                    <div id="ci">
-
+                    <div id="right">
+                        <p onclick="inc(1)">&#10095;</p>
                     </div>
                 </div>
             </div>
+         
         </div>
         <div id="services">
             <div id="hser">
                 <h3> Services</h3>
+               
                 <h2>We provide services around the UAE.</h2>
+                <div id="serv"><div></div></div> 
             </div>
             <div id="ser">
                 <div id="serbox">
@@ -97,17 +114,58 @@
             </div>
         </div>
         <div id="contact">
-
+            <div id="contu">
+                <h1>Contact Us</h1>
+            </div>
+            <div id="contac">
+                <div id="add">
+                    <div id="address">
+                        <h1>ADDRESS</h1>
+                        <h3>4 Plus Star General Trading</h3>
+                        <h4>P.O.Box: 191301</h4>
+                        <h4>Dubai, UAE</h4>
+                    </div>
+                </div>
+                <div id="con">
+                    <div id="contactinfo">
+                        <h1>CONTACT INFO</h1>
+                        <h3>Call Us</h3>
+                        <h3><a href="tel:+971507889602">Mob: +971507889602</a></h3>
+                        <h3><a href="tel:+97142737448">Tel: +97142737448</a></h3>
+                        <h3>Fax: +97142737448</h3>
+                        <br>
+                        <h3>Email</h3>
+                        <h3><a href="mailto:info@4plustech.com">info@4plustech.com</a></h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
-        var card=document.querySelector('#prod');
-        card.addEventListener("mouseenter",()=>{
-            card.style="animation-play-state:paused";
-        })
-        card.addEventListener("mouseleave",()=>{
-            card.style="animation-play-state:resume";
-        })
+        var num=1;
+        function inc(n){
+            if(num+n<=4){
+                document.getElementById(num).style="display:none";
+                num=num+n;
+                console.log(num);
+                document.getElementById(num).style="display:grid;grid-template-rows:80% 20%;";
+            }
+            
+        }
+        function dec(n){
+            if(num!=1){
+                document.getElementById(num).style="display:none";
+                num=num+n;
+                
+                document.getElementById(num).style="display:grid;grid-template-rows:80% 20%;";
+            }
+        }
+        function slide(num){
+            
+            document.getElementById(num).style="display:grid;grid-template-rows:80% 20%;"
+           
+        }
+        slide(num);
     </script>
 </body>
 </html>
