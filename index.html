@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>4plus star general Trading </title>
+</head>
+<body>
+    <div id="cont">
+        <div id="home">
+            <div id="nav">
+                <div id="logo">
+                   <div id="img">
+                       <img src="./img/logo.png" alt="logo">
+                   </div>
+                </div>
+                <div id="nav-bar">
+                    <ol>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Products</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div id="h-cont">
+                    <p id="cnn">4 Plus Star<br/> General Trading</p>
+                         
+            </div>
+     
+        </div>
+        <div id="product">
+            <div id="prodh">
+                <p>Products</p>
+                <div id="line"><div></div></div> 
+            </div>
+            <div id="produ">
+                <div id="pro">
+                    <div id="left">
+                        <p onclick="dec(-1)">&#10094;</p>
+                    </div>
+                    <div id="center">
+                        <div id="1" class="card">
+                            <div id="cimg">
+                                <img src="./img/safety.png" alt="">
+                            </div>
+                            <div id="ci">
+                                <p>Safety Shoes</p>
+                            </div>
+                        </div>
+                        <div id="2" class="card">
+                            <div id="cimg">
+                                <img src="./img/safety.png" alt="">
+                            </div>
+                            <div id="ci">
+                                <p>Safety Shoes 1</p>
+                            </div>
+                        </div>
+                        <div id="3" class="card">
+                            <div id="cimg">
+                                <img src="./img/safety.png" alt="">
+                            </div>
+                            <div id="ci">
+                                <p>Safety Shoes 2 </p>
+                            </div>
+                        </div>
+                        <div id="4" class="card">
+                            <div id="cimg">
+                                <img src="./img/safety.png" alt="">
+                            </div>
+                            <div id="ci">
+                                <p>Safety Shoes 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <p onclick="inc(1)">&#10095;</p>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+        <div id="services">
+            <div id="hser">
+                <h3> Services</h3>
+               
+                <h2>We provide services around the UAE.</h2>
+                <div id="serv"><div></div></div> 
+            </div>
+            <div id="ser">
+                <div id="serbox">
+                   Abu Dhabi
+                </div>
+                <div id="serbox">
+                    Dubai
+                </div>
+                <div id="serbox">
+                    Sharjah
+                </div>
+                <div id="serbox">
+                    Ajman
+                </div>
+                <div id="serbox">
+                    Umm Al Quwain
+                </div>
+                <div id="serbox">
+                    Ras Al Khaimah
+                </div>
+                <div id="serbox">
+                    Fujairah
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div id="contu">
+                <h1>Contact Us</h1>
+            </div>
+            <div id="contac">
+                <div id="add">
+                    <div id="address">
+                        <h1>ADDRESS</h1>
+                        <h3>4 Plus Star General Trading</h3>
+                        <h4>P.O.Box: 191301</h4>
+                        <h4>Dubai, UAE</h4>
+                    </div>
+                </div>
+                <div id="con">
+                    <div id="contactinfo">
+                        <h1>CONTACT INFO</h1>
+                        <h3>Call Us</h3>
+                        <h3><a href="tel:+971507889602">Mob: +971507889602</a></h3>
+                        <h3><a href="tel:+97142737448">Tel: +97142737448</a></h3>
+                        <h3>Fax: +97142737448</h3>
+                        <br>
+                        <h3>Email</h3>
+                        <h3><a href="mailto:info@4plustech.com">info@4plustech.com</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var num=1;
+        function inc(n){
+            if(num+n<=4){
+                document.getElementById(num).style="display:none";
+                num=num+n;
+                console.log(num);
+                document.getElementById(num).style="display:grid;grid-template-rows:80% 20%;";
+            }
+            
+        }
+        function dec(n){
+            if(num!=1){
+                document.getElementById(num).style="display:none";
+                num=num+n;
+                
+                document.getElementById(num).style="display:grid;grid-template-rows:80% 20%;";
+            }
+        }
+        function slide(num){
+            
+            document.getElementById(num).style="display:grid;grid-template-rows:80% 20%;"
+           
+        }
+        slide(num);
+    </script>
+</body>
+</html>
