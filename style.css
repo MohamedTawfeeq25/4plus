@@ -112,7 +112,7 @@ ol li{
     background-color: #F8F8F8;
     
     width:100%;
-    height:90%;
+    height:100%;
 
    display:grid;
    grid-template-rows: 30% 70%;
@@ -130,7 +130,7 @@ ol li{
     font-size: 35px;
     font-weight: bold;
    
-   color :black;
+    color:#222222;
 }
 
 #produ{
@@ -194,65 +194,41 @@ ol li{
 
 #services{
     background-color: #F2F2F2;
-    
-    width:100%;
-    height: 100%;
-    overflow-y:auto;
-    display: grid;
-  
-    grid-template-rows: 30% 70% ;
-}
-#hser h3{
-    width:100%;
-    text-align: center;
-    
-    font-size: 35px;
-   color :#D82625;
-}
-#hser h2{
-    text-align: center;
-    width:100%;
-    color:black;
-}
-#ser{
     display: flex;
-    justify-content: center;
     align-items: center;
-   
-    width: 100%;
-    flex-wrap: wrap;
-    
+    width:100%;
+    height: fit-content;
 }
-#serbox{
-    width:15%;
-    height:40%;
-   background-color: #FFFFFF;
-         cursor: pointer;  
-         text-align: center;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 20px;
-    margin:10px;
-
-    display:flex;
-   
-    justify-content: center;
-    align-items: center;
+#services h1{
+    width:100%;
+    text-align: center;
+    font-size:35px;
+    padding:20px;
+    color:#222222;
 }
-#serbox:hover{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#services p{
+    text-align: center;
+    font-size: 20px;
+    text-align: justify;
+ 
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    line-break: auto;
+    margin:20px;
 }
-#serv{
+#abs{
   
     position: relative;
+  bottom:22px;
  
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-#serv div{
-    width:20%;
+#abs div{
+    width:25%;
     height:15%;
     border:2px solid transparent;
     background-color: #FE3904;
@@ -402,31 +378,47 @@ ol li{
     font-size:22px;
     color:black;
 }
-#ser{
+#services{
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: fit-content;
+}
+#services h1{
+    width:100%;
+    text-align: center;
+    font-size:35px;
+    padding:20px;
+    color:#222222;
+}
+#services p{
+    text-align: center;
+    font-size: 18px;
+    text-align: justify;
+ 
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    line-break: auto;
+    margin:20px;
+}
+#abs{
+  
+    position: relative;
+  bottom:22px;
+ 
     display: flex;
     justify-content: center;
     align-items: center;
-   height: auto;
-    width: 100%;
-    flex-wrap: wrap;
-    
-}
-#serbox{
-    width:28%;
-    height:25%;
-   background-color: #FFFFFF;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 18px;
-    margin:10px;
-    text-align: center;
-    display:flex;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
-}
 
-
+}
+#abs div{
+    width:55%;
+    height:15%;
+    border:2px solid transparent;
+    background-color: #FE3904;
+}
 #contact{
     background-color: #191919;
     width: 100%;
@@ -571,30 +563,6 @@ ol li{
     font-size:22px;
     color:black;
 }
-#ser{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   height: auto;
-    width: 100%;
-    flex-wrap: wrap;
-    
-}
-#serbox{
-    width:25%;
-    height:27%;
-   background-color: #FFFFFF;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 18px;
-    margin:10px;
-    text-align: center;
-    display:flex;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
-}
-
 
 #add h1{
     font-size:30px;
@@ -736,38 +704,43 @@ ol li{
     font-size:25px;
     color:black;
 }
-#ser{
+#services{
+    background-color: #F2F2F2;
     display: flex;
-    justify-content: center;
     align-items: center;
-   height: auto;
-    width: 100%;
-    flex-wrap: wrap;
-    
+    width:100%;
+    height: fit-content;
 }
-#serbox{
-    width:23%;
-    height:28%;
-   background-color: #FFFFFF;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 18px;
-    margin:10px;
+#services h1{
+    width:100%;
     text-align: center;
-    display:flex;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
+    font-size:35px;
+    padding:20px;
+    color:#222222;
 }
-#serv{
+#services p{
+    text-align: center;
+    font-size: 20px;
+    text-align: justify;
+ 
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    line-break: auto;
+    margin:20px;
+}
+#abs{
+  
     position: relative;
+  bottom:22px;
+ 
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-#serv div{
-    width:50%;
+#abs div{
+    width:35%;
     height:15%;
     border:2px solid transparent;
     background-color: #FE3904;
